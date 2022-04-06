@@ -2,6 +2,7 @@ import React from 'react';
 import './calculator.scss';
 
 const Calculator = () => {
+    
   return (
     <div className='calculator_outer'>
         <div className='calculator_title'>
