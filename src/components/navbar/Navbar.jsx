@@ -1,14 +1,20 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import logo from '../../images/logo.png';
 import Button from './Button';
 import { MenuIcon } from '@heroicons/react/solid'
 import { Link } from 'react-router-dom';
+import {provider, setProvider, signer, setSigner} from '../../App';
+
 
 import './navbar.scss';
 
  
  const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
+  let _provider = useContext (provider);
+  let _setProvider = useContext (setProvider);
+  let _signer = useContext (signer);
+  let _setSigner = useContext (setSigner);
 
    return (
      <div className='navbar_outer'>

@@ -9,11 +9,22 @@ import Stake from './components/stack/Stake';
 import Earn from './components/earn/Earn';
 import wrapper1 from './images/Vector1.svg';
 import wrapper2 from './images/Vector2.svg';
+import {useState, createContext } from 'react';
 
+let provider = createContext();
+let setProvider = createContext();
+let signer = createContext();
+let setSigner = createContext();
 
 function App() {
+  let [_provider, _setProvider] = useState("Hi provider");
+  let [_signer, _setSigner] = useState("Hellow signer");
   return (
     
+    <provider.Provider value ={_provider}>
+    <setProvider.Provider value ={_setProvider}>
+    <signer.Provider value ={_signer}>
+    <setSigner.Provider value ={_setSigner}>
     <Router>
            <div className='wrapper1'>
         <img src={wrapper1} alt='wrapper' />
@@ -28,7 +39,12 @@ function App() {
         <Route exact path='/earn' element={<><Navbar/> <Earn/></>}/>
       </Routes>
     </Router>
+    </setSigner.Provider>
+    </signer.Provider>
+    </setProvider.Provider>
+    </provider.Provider>
   );
 }
 
 export default App;
+export {provider, setProvider, signer, setSigner};
