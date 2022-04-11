@@ -15,10 +15,13 @@ let provider = createContext();
 let setProvider = createContext();
 let signer = createContext();
 let setSigner = createContext();
+let walletAddress = createContext();
+let setWalletAddress = createContext();
 
 function App() {
   let [_provider, _setProvider] = useState("Hi provider");
   let [_signer, _setSigner] = useState("Hellow signer");
+  let [_walletAddress, _setWalletAddress] = useState("");
   return (
     
     <provider.Provider value ={_provider}>
@@ -47,4 +50,4 @@ function App() {
 }
 
 export default App;
-export {provider, setProvider, signer, setSigner};
+export {provider, setProvider, signer, setSigner, walletAddress, setWalletAddress};

@@ -9,6 +9,8 @@ import {provider, setProvider, signer, setSigner} from '../../App';
 import Web3Modal from "web3modal";
 import {ethers,  providers } from "ethers";
 import values from "../../values.json"
+// import Fortmatic from "fortmatic";
+// import Torus from "@toruslabs/torus-embed";
 
 const Button = () => {
 
@@ -24,6 +26,36 @@ const Button = () => {
           // package: WalletConnectProvider, // required
           // options: {
           //   infuraId: "INFURA_ID" // required
+          // }
+          // coinbasewallet: {
+          //   package: "CoinbaseWalletSDK", // Required
+          //   options: {
+          //     appName: "My Awesome App", // Required
+          //     infuraId: "INFURA_ID", // Required
+          //     rpc: "", // Optional if `infuraId` is provided; otherwise it's required
+          //     chainId: 1, // Optional. It defaults to 1 if not provided
+          //     darkMode: false // Optional. Use dark theme, defaults to false
+          //   }
+          // },
+          // fortmatic: {
+          //   package: Fortmatic, // required
+          //   options: {
+          //     key: "FORTMATIC_KEY", // required,
+          //     // network: customNetworkOptions // if we don't pass it, it will default to localhost:8454
+          //   }
+          // },
+          // torus: {
+          //   package: Torus, // required
+          //   options: {
+          //     networkParams: {
+          //       host: "https://localhost:8545", // optional
+          //       chainId: 1337, // optional
+          //       networkId: 1337 // optional
+          //     },
+          //     config: {
+          //       buildEnv: "development" // optional
+          //     }
+          //   }
           // }
         }
       },
@@ -48,9 +80,10 @@ const Button = () => {
 
   const getSignerOrProvider = async (needSigner = false) => {
     try{
+      const _provider = new providers.JsonRpcProvider(values.rpcUrl);
+      _setProvider(_provider);
       const provider = await web3ModalRef.current.connect();
       const web3Provider = new providers.Web3Provider(provider);
-      _setProvider(web3Provider);
       const { chainId } = await web3Provider.getNetwork();
       console.log ("ChainId: ", chainId);
       // if (chainId !== 4) {
@@ -126,6 +159,7 @@ const Button = () => {
                     active ? 'bg-gray-100 text-gray-700 ' : 'text-[#fff]',
                     'px-4 py-2 text-sm flex align-middle items-center gap-2'
                   )}
+                  onClick = {()=>{alert("Currently Trust wallet is not supported!")}}
                 >
                 <img src={trustwallet} className="connect_logo" alt="metamask"/>
 
