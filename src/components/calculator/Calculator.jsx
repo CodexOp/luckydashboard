@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './calculator.scss';
 
 const Calculator = () => {
+
+    let [depositAmount, setDepositAmount] = useState(100);
+    let [price, setPrice] = useState(10);
+    let [days, setDays] = useState(365);
+    let [apr, setApr] = useState(6);
     
   return (
     <div className='calculator_outer'>
@@ -10,27 +15,34 @@ const Calculator = () => {
         </div>
         <div className='calculator_content'>
             <div className='title_calculator'>
-            <h3  className='input_label'>Deposit amount (Token)</h3>
+            <h3  className='input_label'>Deposit amount (LUCKY)</h3>
             </div>
             <div className='input_container input_max'>
-                <input className='input_calculator flex_max' placeholder='amount'/>
-                <div className='max'>
+                <input className='input_calculator ' placeholder='amount' value = {depositAmount} onChange={(event)=> setDepositAmount(event.target.value)} />
+                {/* <div className='max'>
                 <h3>Max</h3>
 
-                </div>
+                </div> */}
             </div>
-            <div className='availaible_token'>
+
+            <div className='title_calculator'>
+            <h3  className='input_label'>Price of LUCKY</h3>
+
+            </div>
+            <input className='input_calculator' placeholder='amount' value = {price} onChange={(event)=> setPrice(event.target.value)}/>
+            
+            {/* <div className='availaible_token'>
             <p className='purple'>254675 Dai Availaible</p>
-            </div>
+            </div> */}
             <div className='title_calculator'>
             <h3  className='input_label'>Term In Days</h3>
 
             </div>
-            <input className='input_calculator' placeholder='amount'/>
+            <input className='input_calculator' placeholder='amount' value = {days} onChange={(event)=> setDays(event.target.value)}/>
             <div className='title_calculator'>
-            <h3 className='input_label'>Fixed APR / MPH APR</h3>
+            <h3 className='input_label'>Fixed APR / MPH APR (in %)</h3>
             </div>
-            <input className='input_calculator' placeholder='amount'/>
+            <input className='input_calculator' placeholder='amount' value = {apr} onChange={(event)=> setApr(event.target.value)}/>
 
             <div className='info_calculator'>
                 <div className='info1'>
@@ -38,8 +50,8 @@ const Calculator = () => {
                         <p className='info'>Fixed-rate yield at maturity</p>
                     </div>
                     <div className='right_info'>
-                        <p  className='info'>5421 Token</p>
-                        <p>$2000</p>
+                        <p  className='info'>{(((depositAmount * (36500 + apr * days))/(100 * 365))).toFixed(2)} LUCKY</p>
+                        <p>${(((depositAmount* price * apr * days)/(100 * 365)) + depositAmount* price).toFixed(3)}</p>
                     </div>
                 </div>
                 <div className='info1'>
@@ -48,8 +60,8 @@ const Calculator = () => {
                         
                     </div>
                     <div className='right_info'>
-                    <p  className='info'>5421 Token</p>
-                        <p>$1800</p>
+                    <p  className='info'>{((depositAmount * apr * days)/(100 * 365)).toFixed(3)} LUCKY</p>
+                        <p>${(((depositAmount* price * apr * days)/(100 * 365))).toFixed(3)}</p>
                     </div>
                 </div>
                 <div className='info1'>
@@ -57,11 +69,11 @@ const Calculator = () => {
                         <p className='info'>Total available at maturity 	</p>
                     </div>
                     <div className='right_info'>
-                        <p className='green'>+$0.00</p>
+                        <p className='green'>+${(((depositAmount* price * apr * days)/(100 * 365))).toFixed(3)}</p>
                     </div>
                 </div>
             </div>
-            <button className='button_main earn_button'>Start Earning</button>
+            <button className='button_main earn_button' onClick = {()=> alert("Staking will come soon!")} >Start Earning</button>
         </div>
 
 

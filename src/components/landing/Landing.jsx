@@ -9,15 +9,18 @@ const Landing = () => {
     <div className='landing_outer' >
     
         <div className='landing_left'>
-            <h2 className='landing_heading'>Earn up to 0.00% fixed APR + 0.00% $TKN APR on your crypto</h2>
-            <p className='landing_para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat</p>
+            <h2 className='landing_heading'>Lucky Metaverse <br/> Gateway to your fortune</h2>
+            <p className='landing_para'>
+            Lucky Metaverse is a rebranding and restructuring of the old project Metaface Token (1000BNB HC presale filled) in seconds.<br/>
+            Now the same team and this time with a professional marketeer, restructures their project and here we go, $LMETA got planned and was born in Q1 2022.<br/>
+            </p>
             <div className='boxes'>
         <div className='box'>
             <p className='box_heading'>
             TVL
             </p>
             <h2 className='box_content'>
-            $35.1m
+            NA
 
             </h2>
         </div>
@@ -26,7 +29,7 @@ const Landing = () => {
             YIELD EARNED
             </p>
             <h2 className='box_content'>
-            $1.445m
+            $NA
 
             </h2>
         </div>
@@ -35,7 +38,7 @@ const Landing = () => {
             TOTAL  REVENUE 
             </p>
             <h2 className='box_content'>
-            $0.319m
+            $NA
 
             </h2>
         </div>

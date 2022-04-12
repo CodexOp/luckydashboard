@@ -41,6 +41,11 @@ import './navbar.scss';
                 setNavbarOpen(true)
                 setNavactive('second')                
               }} >DASHBOARD</li></Link>
+              <Link to="/migrate" ><li className={navactive == 'five' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true)
+                setNavactive('five')
+
+              }}>MIGRATE</li></Link>
               <Link to="/stake" ><li className={navactive == 'third' ? 'navigations_active' : ''} onClick={()=>{
                 setNavbarOpen(true)
                 setNavactive('third')
@@ -49,11 +54,7 @@ import './navbar.scss';
                 setNavbarOpen(true)
                 setNavactive('four')
                 }}>EARN</li></Link>
-              <Link to="/migrate" ><li className={navactive == 'five' ? 'navigations_active' : ''} onClick={()=>{
-                setNavbarOpen(true)
-                setNavactive('five')
-
-              }}>MIGRATE</li></Link>
+              
               <li className='navigations active' onClick={()=>setNavbarOpen(true)}>DOCS</li>
              </ul>
              <button className='button button_secondary'>
