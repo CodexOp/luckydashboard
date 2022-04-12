@@ -4,7 +4,10 @@ import './stake.scss'
 const Stake = () => {
   return (
     <div className="dashboard_outer">
-    <div className='top_content'>
+        <div className='comingsoon'>
+            <h2>Coming Soon</h2>
+        </div>
+    {/* <div className='top_content'>
         <h2 className='heading'>STAKE TKN FOR XTKN</h2>
         <p className='subheading'>Don't see your staked MPH tokens below? Click here for migrating them from the v2 staking page</p>
         <p className='description'>Staking your MPH for xMPH allows you to earn 100% of 88mph protocol revenues (bi-weekly MPH
@@ -90,7 +93,7 @@ buy-back mechanism)and voting rights.Learn more.</p>
         </div>
         </div>
         </div>
-        </div>
+        </div> */}
         </div>    
 
   )
