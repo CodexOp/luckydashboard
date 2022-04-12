@@ -10,6 +10,7 @@ import './navbar.scss';
 
  
  const Navbar = () => {
+   const [navactive, setNavactive] = useState()
   const [navbarOpen, setNavbarOpen] = useState(false)
   let _provider = useContext (provider);
   let _setProvider = useContext (setProvider);
@@ -32,10 +33,27 @@ import './navbar.scss';
            }}/>
           <img src={logo} className="logo" alt="" />
          </div>
-              <Link to="/"><li className='navigations active' onClick={()=>setNavbarOpen(true)}>HOME</li></Link>
-              <Link to="/dashboard" ><li className='navigations active' onClick={()=>setNavbarOpen(true)} >DASHBOARD</li></Link>
-              <Link to="/stake" ><li className='navigations active' onClick={()=>setNavbarOpen(true)}>STAKE</li></Link>
-              <Link to="/earn" ><li className='navigations active' onClick={()=>setNavbarOpen(true)}>EARN</li></Link>
+              <Link to="/"><li className={navactive == 'first' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true);
+                setNavactive('first')                
+                }}>HOME</li></Link>
+              <Link to="/dashboard" ><li className={navactive == 'second' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true)
+                setNavactive('second')                
+              }} >DASHBOARD</li></Link>
+              <Link to="/stake" ><li className={navactive == 'third' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true)
+                setNavactive('third')
+              }}>STAKE</li></Link>
+              <Link to="/earn" ><li className={navactive == 'four' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true)
+                setNavactive('four')
+                }}>EARN</li></Link>
+              <Link to="/migrate" ><li className={navactive == 'five' ? 'navigations_active' : ''} onClick={()=>{
+                setNavbarOpen(true)
+                setNavactive('five')
+
+              }}>MIGRATE</li></Link>
               <li className='navigations active' onClick={()=>setNavbarOpen(true)}>DOCS</li>
              </ul>
              <button className='button button_secondary'>

@@ -14,6 +14,11 @@
     }
     
 
+    .navigations_active{
+        border-bottom: 2px solid $blue_text;
+        transition: all 0.3s ease-in-out;
+    }
+
  ul{
     display: flex;
 

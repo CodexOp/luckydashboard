@@ -10,6 +10,7 @@ import Earn from './components/earn/Earn';
 import wrapper1 from './images/Vector1.svg';
 import wrapper2 from './images/Vector2.svg';
 import {useState, createContext } from 'react';
+import Migrate from './components/migrate/Migrate';
 
 let provider = createContext();
 let setProvider = createContext();
@@ -40,6 +41,7 @@ function App() {
         <Route exact path='/dashboard' element={<><Navbar/> <Dashboard /></>}/>
         <Route exact path='/stake' element={<><Navbar/> <Stake /></>}/>
         <Route exact path='/earn' element={<><Navbar/> <Earn/></>}/>
+        <Route exact path='/migrate' element={<><Navbar/> <Migrate/></>}/>
       </Routes>
     </Router>
     </setSigner.Provider>
