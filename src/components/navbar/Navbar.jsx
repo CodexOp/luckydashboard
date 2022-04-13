@@ -11,7 +11,7 @@ import './navbar.scss';
  
  const Navbar = () => {
    const [navactive, setNavactive] = useState()
-  const [navbarOpen, setNavbarOpen] = useState(false)
+  const [navbarOpen, setNavbarOpen] = useState(true)
   let _provider = useContext (provider);
   let _setProvider = useContext (setProvider);
   let _signer = useContext (signer);
