@@ -15,7 +15,7 @@ const Calculator = () => {
         </div>
         <div className='calculator_content'>
             <div className='title_calculator'>
-            <h3  className='input_label'>Deposit amount (LUCKY)</h3>
+            <h3  className='input_label'>Deposit amount (LMETA)</h3>
             </div>
             <div className='input_container input_max'>
                 <input className='input_calculator ' placeholder='amount' value = {depositAmount} onChange={(event)=> setDepositAmount(event.target.value)} />
@@ -26,7 +26,7 @@ const Calculator = () => {
             </div>
 
             <div className='title_calculator'>
-            <h3  className='input_label'>Price of LUCKY</h3>
+            <h3  className='input_label'>Price of LMETA</h3>
 
             </div>
             <input className='input_calculator' placeholder='amount' value = {price} onChange={(event)=> setPrice(event.target.value)}/>
@@ -50,7 +50,7 @@ const Calculator = () => {
                         <p className='info'>Fixed-rate yield at maturity</p>
                     </div>
                     <div className='right_info'>
-                        <p  className='info'>{(((depositAmount * (36500 + apr * days))/(100 * 365))).toFixed(2)} LUCKY</p>
+                        <p  className='info'>{(((depositAmount * (36500 + apr * days))/(100 * 365))).toFixed(2)} LMETA</p>
                         <p>${(((depositAmount* price * apr * days)/(100 * 365)) + depositAmount* price).toFixed(3)}</p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ const Calculator = () => {
                         
                     </div>
                     <div className='right_info'>
-                    <p  className='info'>{((depositAmount * apr * days)/(100 * 365)).toFixed(3)} LUCKY</p>
+                    <p  className='info'>{((depositAmount * apr * days)/(100 * 365)).toFixed(3)} LMETA</p>
                         <p>${(((depositAmount* price * apr * days)/(100 * 365))).toFixed(3)}</p>
                     </div>
                 </div>

@@ -226,12 +226,12 @@ const Dashboard = () => {
     <div className="dashboard_outer">
         <div className='top_content'>
             <h2 className='heading'>TOKEN DASHBOARD</h2>
-            <p className='subheading'>Explore all your LUCKY holdings at one place</p>
+            <p className='subheading'>Explore all your LMETA holdings at one place</p>
             <p className='description'>Get insights from your own personalised dashboard. Open the door to your Luch through this dashboard.</p>
         </div>
         <div className='dashboard_box'>
             <div className='box_outer'>
-                <p className='box_title'>LUCKY Holdings</p>
+                <p className='box_title'>LMETA Holdings</p>
                 <h2 className='box_value'>{balance}</h2>
             </div>
             <div className='box_outer'>
@@ -249,7 +249,7 @@ const Dashboard = () => {
                 <h2 className='title_value'>{(totalSupply * price).toFixed(3)}</h2>
             </div>
             <div className='internal_box'>
-                <p className='title_dash'>LUCKY Price</p>
+                <p className='title_dash'>LMETA Price</p>
                 <h2 className='title_value'>{price}</h2>
             </div>
             <div className='internal_box'>

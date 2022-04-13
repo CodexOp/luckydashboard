@@ -192,7 +192,7 @@ const Migrate = () => {
         <p className='purple'>{balance} Tokens Availaible</p>
         </div>
         <div className='title_calculator'>
-        <h3  className='input_label'>OUTPUT LUCKY TOKEN</h3>
+        <h3  className='input_label'>OUTPUT LMETA TOKEN</h3>
 
         </div>
         <input className='input_calculator' placeholder='amount' value = {outputAmount} disabled/>
