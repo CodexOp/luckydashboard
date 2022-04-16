@@ -101,11 +101,12 @@ const Migrate = () => {
   async function approve () {
       try{
         const token = new ethers.Contract (
-            values.token,
+            values.MFT,
             tokenAbi,
             _signer
         )
         let _decimals = await token.decimals();
+        console.log("Hellow Decimal:", _decimals)
         let _amount = ethers.utils.parseUnits((balance*2).toString(), _decimals);
         let tx = await token.approve(values.migration, _amount);
       }catch (err) {
@@ -122,7 +123,7 @@ const Migrate = () => {
               _signer
           );
           const token = new ethers.Contract (
-            values.token,
+            values.MFT,
             tokenAbi,
             _signer
           )
@@ -175,7 +176,7 @@ const Migrate = () => {
         </div>
         <div className='input_container input_max'>
             <input className='input_calculator flex_max' placeholder='amount' value= {inputAmount} onChange={(event) =>{console.log ("value:", inputAmount); changeInput("", event.target.value)}} />
-            <div className='max'>
+            <div className='max' onClick={() => changeInput("fourth", (balance))}>  
             <h3>Max</h3>
 
             </div>
