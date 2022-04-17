@@ -12,7 +12,7 @@ const Landing = () => {
             <h2 className='landing_heading'>Lucky Metaverse <br/> Gateway to your fortune</h2>
             <p className='landing_para'>
             Lucky Metaverse is a rebranding and restructuring of the old project Metaface Token (1000BNB HC presale filled) in seconds.<br/>
-            Now the same team and this time with a professional marketeer, restructures their project and here we go, $LMETA got planned and was born in Q1 2022.<br/>
+            Now the same team and this time with a professional partnership to restructure the project and here we go. $LMETA was born in Q1 2022.<br/>
             </p>
             <div className='boxes'>
         <div className='box'>
